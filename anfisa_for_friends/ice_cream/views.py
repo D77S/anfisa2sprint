@@ -7,7 +7,7 @@ def ice_cream_detail(request, pk):
     template_name = 'ice_cream/detail.html'
     ice_cream = get_object_or_404(
         IceCream.objects.values(
-            'title', 'description',
+            'title', 'description'
         ).filter(is_published=True),  # type: ignore
         pk=pk
     )
