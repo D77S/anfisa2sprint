@@ -103,6 +103,7 @@ class IceCream(PublishedModel):
     class Meta:
         verbose_name = 'Мороженое'
         verbose_name_plural = 'Мороженыя'
+        ordering = ('output_order', 'title')
 
     def __str__(self):
         return self.title
